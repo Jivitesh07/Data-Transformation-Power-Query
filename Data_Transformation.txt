@@ -1,0 +1,52 @@
+TRANSFORMATION NOTES
+Task 12: Power BI – Data Transformation using Power Query
+
+Objective:
+The objective of this task was to clean, transform, and prepare raw HR analytics data using Power Query in Power BI to make it suitable for analysis and dashboard creation.
+
+Dataset Used:
+HR Analytics Dataset (CSV format)
+
+Transformation Steps Performed:
+
+1. Data Import
+   - Imported the HR analytics dataset into Power BI using the Text/CSV connector.
+   - Opened the dataset in Power Query Editor for transformation.
+
+2. Column Cleaning
+   - Removed unnecessary identifier columns (EmployeeID) to reduce redundancy.
+   - Renamed columns to improve clarity and maintain professional naming conventions:
+     - Department → Dept
+     - Attrition → Employee_Attrition
+
+3. Handling Data Types
+   - Ensured correct data types were assigned:
+     - Age and Salary as numeric (Whole Number)
+     - Gender, Dept, and Employee_Attrition as text
+   - This step ensures accurate aggregations and visual calculations.
+
+4. Handling Missing Values
+   - Verified that no critical columns contained null or invalid values.
+   - Dataset was confirmed clean after validation.
+
+5. Feature Engineering (Derived Columns)
+   - Created a new column “Age_Group” using conditional logic:
+     - Young: Age < 25
+     - Mid Age: Age between 25 and 40
+     - Senior: Age > 40
+   - Created a new column “Salary_Band”:
+     - Low: Salary < 30,000
+     - Medium: Salary between 30,000 and 70,000
+     - High: Salary > 70,000
+
+6. Final Validation
+   - Reviewed all applied steps in Power Query.
+   - Ensured transformed data was consistent and analysis-ready.
+   - Applied changes and loaded the cleaned dataset into the Power BI data model.
+
+Outcome:
+The transformed dataset is clean, structured, and enriched with additional insights through derived columns. It is optimized for dashboard creation and supports effective analysis of employee distribution, attrition, and salary structure.
+
+Tools Used:
+- Power BI Desktop
+- Power Query Editor
